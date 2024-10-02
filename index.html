@@ -3,67 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional CV</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>CV Form</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
 </head>
 <body>
-    <div class="background">
-        <div class="moon"></div>
-        <div class="star" style="top: 10%; left: 20%;"></div>
-        <div class="star" style="top: 30%; left: 60%;"></div>
-        <div class="star" style="top: 50%; left: 80%;"></div>
-        <div class="star" style="top: 70%; left: 40%;"></div>
-        <div class="star" style="top: 80%; left: 90%;"></div>
-        <div class="star" style="top: 40%; left: 10%;"></div>
+
+    <div class="form-container">
+        <h1>CV Details Form</h1>
+
+        <form action="#" method="post" enctype="multipart/form-data">
+            <!-- Contact Information -->
+            <fieldset>
+                <legend>Contact Information</legend>
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="linkedin">LinkedIn Profile (optional):</label>
+                <input type="url" id="linkedin" name="linkedin">
+
+                <label for="address">Address (optional):</label>
+                <input type="text" id="address" name="address">
+
+                <label for="photo">Upload Photo (optional):</label>
+                <input type="file" id="photo" name="photo" accept="image/*">
+            </fieldset>
+
+            <!-- Professional Summary -->
+            <fieldset>
+                <legend>Professional Summary/Objective</legend>
+                <textarea id="summary" name="summary" rows="4" placeholder="Briefly summarize your career goals and skills"></textarea>
+            </fieldset>
+
+            <!-- Work Experience -->
+            <fieldset>
+                <legend>Work Experience</legend>
+                <label for="jobTitle">Job Title:</label>
+                <input type="text" id="jobTitle" name="jobTitle" required>
+
+                <label for="companyName">Company Name:</label>
+                <input type="text" id="companyName" name="companyName" required>
+
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+
+                <label for="employmentDates">Dates of Employment:</label>
+                <input type="text" id="employmentDates" name="employmentDates" required>
+
+                <label for="responsibilities">Responsibilities and Achievements:</label>
+                <textarea id="responsibilities" name="responsibilities" rows="4" required></textarea>
+            </fieldset>
+
+            <!-- Education -->
+            <fieldset>
+                <legend>Education</legend>
+                <label for="degree">Degree Earned:</label>
+                <input type="text" id="degree" name="degree" required>
+
+                <label for="institution">Institution Name:</label>
+                <input type="text" id="institution" name="institution" required>
+
+                <label for="eduLocation">Location:</label>
+                <input type="text" id="eduLocation" name="eduLocation" required>
+
+                <label for="graduationDate">Graduation Date:</label>
+                <input type="text" id="graduationDate" name="graduationDate" required>
+
+                <label for="coursework">Relevant Coursework (optional):</label>
+                <textarea id="coursework" name="coursework" rows="2"></textarea>
+            </fieldset>
+
+            <!-- Skills -->
+            <fieldset>
+                <legend>Skills</legend>
+                <textarea id="skills" name="skills" rows="4" placeholder="List your skills separated by commas"></textarea>
+            </fieldset>
+
+            <!-- Certifications and Licenses -->
+            <fieldset>
+                <legend>Certifications and Licenses</legend>
+                <textarea id="certifications" name="certifications" rows="4" placeholder="List any certifications or licenses"></textarea>
+            </fieldset>
+
+            <!-- Professional Affiliations -->
+            <fieldset>
+                <legend>Professional Affiliations</legend>
+                <textarea id="affiliations" name="affiliations" rows="4" placeholder="List any professional organizations you belong to"></textarea>
+            </fieldset>
+
+            <!-- Projects -->
+            <fieldset>
+                <legend>Projects</legend>
+                <textarea id="projects" name="projects" rows="4" placeholder="Describe significant projects related to your field"></textarea>
+            </fieldset>
+
+            <!-- Publications -->
+            <fieldset>
+                <legend>Publications and Presentations</legend>
+                <textarea id="publications" name="publications" rows="4" placeholder="List any articles or presentations you have authored"></textarea>
+            </fieldset>
+
+            <!-- Volunteer Experience -->
+            <fieldset>
+                <legend>Volunteer Experience</legend>
+                <textarea id="volunteer" name="volunteer" rows="4" placeholder="Describe any relevant volunteer work"></textarea>
+            </fieldset>
+
+            <!-- References -->
+            <fieldset>
+                <legend>References</legend>
+                <textarea id="references" name="references" rows="2" placeholder="Available upon request"></textarea>
+            </fieldset>
+
+            <button type="submit">Submit CV</button>
+        </form>
     </div>
-    <div class="cv-container">
-        <h1>Your Name</h1>
-        <p>Phone: (Your Phone Number)</p>
-        <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></p>
 
-        <h2>Professional Summary</h2>
-        <p>Detail-oriented marketing professional with over 5 years of experience in digital marketing strategies and brand management. Proven track record of increasing online engagement and driving revenue growth through innovative campaigns.</p>
+    <script>
+        // Bubble generation function
+        function createBubble() {
+            const bubble = document.createElement("div");
+            const size = Math.random() * 30 + 10; // Random size between 10px and 40px
+            bubble.classList.add("bubble");
+            bubble.style.width = `${size}px`;
+            bubble.style.height = `${size}px`;
+            bubble.style.left = `${Math.random() * 100}vw`; // Random horizontal position
+            bubble.style.animationDuration = `${Math.random() * 2 + 3}s`; // Random duration between 3s and 5s
 
-        <h2>Skills</h2>
-        <ul>
-            <li>Digital Marketing</li>
-            <li>SEO and SEM</li>
-            <li>Data Analysis</li>
-            <li>Project Management</li>
-            <li>Team Leadership</li>
-        </ul>
+            document.body.appendChild(bubble);
 
-        <h2>Work Experience</h2>
-        <div class="experience">
-            <h3>Marketing Manager | ABC Corp | New York, NY | June 2019 - Present</h3>
-            <ul>
-                <li>Developed and implemented digital marketing campaigns, resulting in a 30% increase in online sales.</li>
-                <li>Managed a team of 5, enhancing project delivery speed by 20%.</li>
-            </ul>
-        </div>
+            // Remove the bubble after it falls
+            bubble.addEventListener("animationend", () => {
+                bubble.remove();
+            });
+        }
 
-        <h2>Education</h2>
-        <p>Bachelor of Science in Marketing | XYZ University | Graduated: May 2018</p>
-        <p>Dean’s List for 3 consecutive years.</p>
+        // Generate bubbles every 300ms
+        setInterval(createBubble, 300);
+    </script>
 
-        <h2>Certifications</h2>
-        <ul>
-            <li>Google Analytics Certified</li>
-            <li>Certified Digital Marketing Professional (CDMP)</li>
-        </ul>
-
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Social Media Campaign for XYZ Product</h3>
-            <p>Led a cross-functional team to create a social media campaign that achieved a 50% increase in engagement over three months.</p>
-        </div>
-
-        <h2>Professional Affiliations</h2>
-        <p>Member, American Marketing Association (AMA)</p>
-
-        <h2>References</h2>
-        <p>Available upon request.</p>
-    </div>
 </body>
 </html>
