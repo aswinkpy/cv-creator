@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212; /* Dark background */
+    overflow: hidden;
+    position: relative;
+}
+
+.form-container {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh; /* Max height for scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #ffffff; /* Label color */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #252525; /* Input background */
+    color: #ffffff; /* Input text color */
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.background-animation {
+    position: absolute;
+    width: 200px; /* Width of the card */
+    height: 200px; /* Height of the card */
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    animation: move 5s infinite alternate;
+}
+
+.background-animation.right {
+    right: -100px; /* Start position for right card */
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-50%) translateX(-50%);
+        opacity: 0;
+    }
+}
+
+.background-animation:nth-child(1) {
+    animation-delay: 1s; /* Delay for the first card */
+}
+.background-animation:nth-child(2) {
+    animation-delay: 2s; /* Delay for the second card */
+}
