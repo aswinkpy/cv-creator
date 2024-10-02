@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="background-animation right"></div>
+
+    <div class="form-container">
+        <h1>CV Details Form</h1>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Contact Information</legend>
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="linkedin">LinkedIn Profile (optional):</label>
+                <input type="url" id="linkedin" name="linkedin">
+
+                <label for="address">Address (optional):</label>
+                <input type="text" id="address" name="address">
+
+                <label for="photo">Upload Photo (optional):</label>
+                <input type="file" id="photo" name="photo" accept="image/*">
+            </fieldset>
+
+            <fieldset>
+                <legend>Professional Summary/Objective</legend>
+                <textarea id="summary" name="summary" rows="4" placeholder="Briefly summarize your career goals and skills"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Work Experience</legend>
+                <label for="jobTitle">Job Title:</label>
+                <input type="text" id="jobTitle" name="jobTitle" required>
+
+                <label for="companyName">Company Name:</label>
+                <input type="text" id="companyName" name="companyName" required>
+
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+
+                <label for="employmentDates">Dates of Employment:</label>
+                <input type="text" id="employmentDates" name="employmentDates" required>
+
+                <label for="responsibilities">Responsibilities and Achievements:</label>
+                <textarea id="responsibilities" name="responsibilities" rows="4" required></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Education</legend>
+                <label for="degree">Degree Earned:</label>
+                <input type="text" id="degree" name="degree" required>
+
+                <label for="institution">Institution Name:</label>
+                <input type="text" id="institution" name="institution" required>
+
+                <label for="eduLocation">Location:</label>
+                <input type="text" id="eduLocation" name="eduLocation" required>
+
+                <label for="graduationDate">Graduation Date:</label>
+                <input type="text" id="graduationDate" name="graduationDate" required>
+
+                <label for="coursework">Relevant Coursework (optional):</label>
+                <textarea id="coursework" name="coursework" rows="2"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Skills</legend>
+                <textarea id="skills" name="skills" rows="4" placeholder="List your skills separated by commas"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Certifications and Licenses</legend>
+                <textarea id="certifications" name="certifications" rows="4" placeholder="List any certifications or licenses"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Professional Affiliations</legend>
+                <textarea id="affiliations" name="affiliations" rows="4" placeholder="List any professional organizations you belong to"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Projects</legend>
+                <textarea id="projects" name="projects" rows="4" placeholder="Describe significant projects related to your field"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Publications and Presentations</legend>
+                <textarea id="publications" name="publications" rows="4" placeholder="List any articles or presentations you have authored"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Volunteer Experience</legend>
+                <textarea id="volunteer" name="volunteer" rows="4" placeholder="Describe any relevant volunteer work"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>References</legend>
+                <textarea id="references" name="references" rows="2" placeholder="Available upon request"></textarea>
+            </fieldset>
+
+            <button type="submit">Submit CV</button>
+        </form>
+    </div>
+</body>
+</html>
