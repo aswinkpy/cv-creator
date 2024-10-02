@@ -3,10 +3,9 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start; /* Align to the top to allow scrolling */
+    min-height: 100vh; /* Allow full height */
     background-color: #121212; /* Dark background */
-    overflow: hidden;
     position: relative;
 }
 
@@ -104,6 +103,7 @@ body {
     height: auto; /* Allow height to adjust to content */
     position: relative;
     z-index: 1; /* Above the background animations */
+    margin-top: 20px; /* Add some margin to the top for spacing */
 }
 
 h1 {
